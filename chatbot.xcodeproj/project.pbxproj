@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		702C851E253086330054ECBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C851D253086330054ECBD /* AppDelegate.swift */; };
 		702C8520253086330054ECBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C851F253086330054ECBD /* SceneDelegate.swift */; };
-		702C8522253086330054ECBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C8521253086330054ECBD /* ViewController.swift */; };
+		702C8522253086330054ECBD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C8521253086330054ECBD /* ChatViewController.swift */; };
 		702C8525253086330054ECBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702C8523253086330054ECBD /* Main.storyboard */; };
 		702C8527253086370054ECBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702C8526253086370054ECBD /* Assets.xcassets */; };
 		702C852A253086370054ECBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702C8528253086370054ECBD /* LaunchScreen.storyboard */; };
 		702C8535253086370054ECBD /* chatbotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C8534253086370054ECBD /* chatbotTests.swift */; };
 		702C8540253086370054ECBD /* chatbotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C853F253086370054ECBD /* chatbotUITests.swift */; };
+		702C85572530B9D50054ECBD /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85562530B9D50054ECBD /* RoundedButton.swift */; };
+		702C855E2530C1D30054ECBD /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C855C2530C1D30054ECBD /* UserCell.swift */; };
+		702C855F2530C1D30054ECBD /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C855D2530C1D30054ECBD /* UserCell.xib */; };
+		702C85682530D03C0054ECBD /* BotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85662530D03C0054ECBD /* BotCell.swift */; };
+		702C85692530D03C0054ECBD /* BotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C85672530D03C0054ECBD /* BotCell.xib */; };
+		702C856E2530D9AB0054ECBD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C856D2530D9AB0054ECBD /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,7 @@
 		702C851A253086330054ECBD /* chatbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		702C851D253086330054ECBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		702C851F253086330054ECBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		702C8521253086330054ECBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		702C8521253086330054ECBD /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		702C8524253086330054ECBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		702C8526253086370054ECBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		702C8529253086370054ECBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		702C853B253086370054ECBD /* chatbotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatbotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		702C853F253086370054ECBD /* chatbotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatbotUITests.swift; sourceTree = "<group>"; };
 		702C8541253086370054ECBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		702C85562530B9D50054ECBD /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		702C855C2530C1D30054ECBD /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		702C855D2530C1D30054ECBD /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		702C85662530D03C0054ECBD /* BotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotCell.swift; sourceTree = "<group>"; };
+		702C85672530D03C0054ECBD /* BotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotCell.xib; sourceTree = "<group>"; };
+		702C856D2530D9AB0054ECBD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +113,11 @@
 			children = (
 				702C851D253086330054ECBD /* AppDelegate.swift */,
 				702C851F253086330054ECBD /* SceneDelegate.swift */,
-				702C8521253086330054ECBD /* ViewController.swift */,
-				702C8523253086330054ECBD /* Main.storyboard */,
+				702C8552253088320054ECBD /* Model */,
+				702C85512530882C0054ECBD /* View */,
+				702C855B2530C1990054ECBD /* Customized cells */,
+				702C85502530881C0054ECBD /* Controller */,
 				702C8526253086370054ECBD /* Assets.xcassets */,
-				702C8528253086370054ECBD /* LaunchScreen.storyboard */,
 				702C852B253086370054ECBD /* Info.plist */,
 			);
 			path = chatbot;
@@ -126,6 +139,43 @@
 				702C8541253086370054ECBD /* Info.plist */,
 			);
 			path = chatbotUITests;
+			sourceTree = "<group>";
+		};
+		702C85502530881C0054ECBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				702C8521253086330054ECBD /* ChatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		702C85512530882C0054ECBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				702C8523253086330054ECBD /* Main.storyboard */,
+				702C8528253086370054ECBD /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		702C8552253088320054ECBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				702C85562530B9D50054ECBD /* RoundedButton.swift */,
+				702C856D2530D9AB0054ECBD /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		702C855B2530C1990054ECBD /* Customized cells */ = {
+			isa = PBXGroup;
+			children = (
+				702C855C2530C1D30054ECBD /* UserCell.swift */,
+				702C855D2530C1D30054ECBD /* UserCell.xib */,
+				702C85662530D03C0054ECBD /* BotCell.swift */,
+				702C85672530D03C0054ECBD /* BotCell.xib */,
+			);
+			path = "Customized cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +281,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702C855F2530C1D30054ECBD /* UserCell.xib in Resources */,
+				702C85692530D03C0054ECBD /* BotCell.xib in Resources */,
 				702C852A253086370054ECBD /* LaunchScreen.storyboard in Resources */,
 				702C8527253086370054ECBD /* Assets.xcassets in Resources */,
 				702C8525253086330054ECBD /* Main.storyboard in Resources */,
@@ -258,9 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				702C8522253086330054ECBD /* ViewController.swift in Sources */,
+				702C8522253086330054ECBD /* ChatViewController.swift in Sources */,
 				702C851E253086330054ECBD /* AppDelegate.swift in Sources */,
 				702C8520253086330054ECBD /* SceneDelegate.swift in Sources */,
+				702C85682530D03C0054ECBD /* BotCell.swift in Sources */,
+				702C855E2530C1D30054ECBD /* UserCell.swift in Sources */,
+				702C85572530B9D50054ECBD /* RoundedButton.swift in Sources */,
+				702C856E2530D9AB0054ECBD /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ChatViewController" customModule="chatbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBl-pv-aAP">
+                                <rect key="frame" x="5" y="4" width="365" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CricBot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMp-HT-hIL">
+                                        <rect key="frame" x="152.5" y="10" width="60" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmA-xS-yko">
+                                        <rect key="frame" x="165.5" y="31.5" width="34" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="cricPurple"/>
+                                <constraints>
+                                    <constraint firstItem="QMp-HT-hIL" firstAttribute="top" secondItem="ZBl-pv-aAP" secondAttribute="top" constant="10" id="TXN-PP-I5P"/>
+                                    <constraint firstItem="qmA-xS-yko" firstAttribute="top" secondItem="QMp-HT-hIL" secondAttribute="bottom" id="VRq-3P-14z"/>
+                                    <constraint firstAttribute="height" constant="55" id="fC5-hl-dBu"/>
+                                    <constraint firstItem="qmA-xS-yko" firstAttribute="centerX" secondItem="ZBl-pv-aAP" secondAttribute="centerX" id="ixG-rp-hiA"/>
+                                    <constraint firstItem="QMp-HT-hIL" firstAttribute="centerX" secondItem="ZBl-pv-aAP" secondAttribute="centerX" id="t2r-WP-ntP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botDP" translatesAutoresizingMaskIntoConstraints="NO" id="t6c-ro-NyF">
+                                <rect key="frame" x="22" y="12" width="58" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="C7s-FY-Zvl"/>
+                                    <constraint firstAttribute="height" constant="58" id="i4v-gT-cuk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cricbot" translatesAutoresizingMaskIntoConstraints="NO" id="dmf-WO-fDo">
+                                <rect key="frame" x="25" y="100" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4oj-u6-Z6e"/>
+                                    <constraint firstAttribute="width" constant="100" id="UTX-uY-BOk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-9R-YYq">
+                                <rect key="frame" x="125" y="114" width="28" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm CricBot." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb3-Xi-0ev">
+                                <rect key="frame" x="125" y="133" width="85" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to know about IPL?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLJ-Ns-cO2">
+                                <rect key="frame" x="125" y="155.5" width="150" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWr-4Z-XwD">
+                                <rect key="frame" x="27" y="210" width="36" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="cricPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwQ-kU-qEv" customClass="RoundedButton" customModule="chatbot" customModuleProvider="target">
+                                <rect key="frame" x="22" y="235" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="xRa-Hx-TwC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Latest">
+                                    <color key="titleColor" name="cricPurple"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" name="cricPurple"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="latestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H82-WX-fP3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRe-pn-cN9" customClass="RoundedButton" customModule="chatbot" customModuleProvider="target">
+                                <rect key="frame" x="130" y="235" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="kYG-PO-7KP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Matches">
+                                    <color key="titleColor" name="cricPurple"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" name="cricPurple"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="matchesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Wc-OS-lwx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZl-NU-6YP" customClass="RoundedButton" customModule="chatbot" customModuleProvider="target">
+                                <rect key="frame" x="238" y="235" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="VyD-wb-1Uh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Teams">
+                                    <color key="titleColor" name="cricPurple"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" name="cricPurple"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="teamPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HC2-1r-QBe"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online" translatesAutoresizingMaskIntoConstraints="NO" id="hKm-M7-Ikm">
+                                <rect key="frame" x="70" y="49" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="O7O-o2-55j"/>
+                                    <constraint firstAttribute="width" constant="20" id="eht-Yj-arM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online" translatesAutoresizingMaskIntoConstraints="NO" id="ZdV-ad-95l">
+                                <rect key="frame" x="78" y="166" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="nlH-1z-4dr"/>
+                                    <constraint firstAttribute="width" constant="20" id="suG-ji-a9y"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="myr-Jr-cQG">
+                                <rect key="frame" x="5" y="273" width="365" height="303"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jFO-xw-btu">
+                                <rect key="frame" x="14" y="623" width="347" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qmu-h3-apw">
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="317" id="pWC-lj-DlR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHb-Kd-K11">
+                                        <rect key="frame" x="325" y="0.0" width="22" height="34"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="mic" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dWr-4Z-XwD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="2fG-jx-OOn"/>
+                            <constraint firstItem="oRe-pn-cN9" firstAttribute="leading" secondItem="GwQ-kU-qEv" secondAttribute="trailing" constant="8" symbolic="YES" id="3Ld-ew-ygJ"/>
+                            <constraint firstItem="ZBl-pv-aAP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="4H5-SI-zb4"/>
+                            <constraint firstItem="GwQ-kU-qEv" firstAttribute="top" secondItem="ZdV-ad-95l" secondAttribute="bottom" constant="49" id="5pv-uO-wrG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="myr-Jr-cQG" secondAttribute="trailing" constant="5" id="8A1-lt-c4r"/>
+                            <constraint firstItem="t6c-ro-NyF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="AGk-Ii-mwG"/>
+                            <constraint firstItem="tb3-Xi-0ev" firstAttribute="top" secondItem="kSf-9R-YYq" secondAttribute="bottom" constant="3" id="Ajc-66-GGT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jFO-xw-btu" secondAttribute="trailing" constant="14" id="Dog-R8-8hR"/>
+                            <constraint firstItem="oRe-pn-cN9" firstAttribute="baseline" secondItem="GwQ-kU-qEv" secondAttribute="baseline" id="EZ3-nY-qWf"/>
+                            <constraint firstItem="ZdV-ad-95l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="MZI-Fi-Njv"/>
+                            <constraint firstItem="jFO-xw-btu" firstAttribute="top" secondItem="myr-Jr-cQG" secondAttribute="bottom" constant="47" id="Oic-L2-mf9"/>
+                            <constraint firstItem="t6c-ro-NyF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="PnH-vX-0iM"/>
+                            <constraint firstItem="jFO-xw-btu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="Rp7-Az-8GL"/>
+                            <constraint firstItem="hKm-M7-Ikm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="VU9-WE-tWK"/>
+                            <constraint firstItem="oRe-pn-cN9" firstAttribute="baseline" secondItem="mZl-NU-6YP" secondAttribute="baseline" id="Vrr-Hd-NMK"/>
+                            <constraint firstItem="GwQ-kU-qEv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="XFt-Xk-ppj"/>
+                            <constraint firstAttribute="trailing" secondItem="mLJ-Ns-cO2" secondAttribute="trailing" constant="100" id="XL8-6i-ltg"/>
+                            <constraint firstItem="dmf-WO-fDo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="YTk-7t-pLa"/>
+                            <constraint firstItem="myr-Jr-cQG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="YaH-E7-N1s"/>
+                            <constraint firstItem="myr-Jr-cQG" firstAttribute="top" secondItem="GwQ-kU-qEv" secondAttribute="bottom" constant="8" symbolic="YES" id="bZo-hr-KHa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jFO-xw-btu" secondAttribute="bottom" constant="10" id="c8T-42-k8I"/>
+                            <constraint firstItem="hKm-M7-Ikm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="70" id="erL-c8-1pw"/>
+                            <constraint firstItem="GwQ-kU-qEv" firstAttribute="top" secondItem="dWr-4Z-XwD" secondAttribute="bottom" constant="8" symbolic="YES" id="fLv-vg-9oQ"/>
+                            <constraint firstItem="mZl-NU-6YP" firstAttribute="leading" secondItem="oRe-pn-cN9" secondAttribute="trailing" constant="8" symbolic="YES" id="gB6-Wb-dXh"/>
+                            <constraint firstItem="tb3-Xi-0ev" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="hG4-aF-S4C"/>
+                            <constraint firstItem="dmf-WO-fDo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="qia-Sc-mKa"/>
+                            <constraint firstItem="mLJ-Ns-cO2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="reT-L9-c8Y"/>
+                            <constraint firstItem="ZBl-pv-aAP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-5" id="s0G-eN-yHN"/>
+                            <constraint firstItem="ZBl-pv-aAP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="tHN-ms-t6R"/>
+                            <constraint firstItem="dWr-4Z-XwD" firstAttribute="top" secondItem="dmf-WO-fDo" secondAttribute="bottom" constant="10" id="waw-Cz-Nk8"/>
+                            <constraint firstItem="mLJ-Ns-cO2" firstAttribute="top" secondItem="tb3-Xi-0ev" secondAttribute="bottom" constant="3" id="xim-Qh-CIw"/>
+                            <constraint firstItem="kSf-9R-YYq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="114" id="ySp-F2-1VO"/>
+                            <constraint firstItem="kSf-9R-YYq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="yxa-zL-oNR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="myr-Jr-cQG" id="hV4-7h-w7f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149.59999999999999" y="76.911544227886068"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botDP" width="58" height="58"/>
+        <image name="cricbot" width="77.5" height="77.5"/>
+        <image name="mic" catalog="system" width="108" height="128"/>
+        <image name="online" width="20" height="20"/>
+        <namedColor name="cricPurple">
+            <color red="0.25499999523162842" green="0.16899999976158142" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.3529999852180481" green="0.3529999852180481" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
