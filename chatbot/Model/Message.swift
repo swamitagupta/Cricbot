@@ -11,3 +11,10 @@ struct Message {
     let message: String
     let bot: Bool
 }
+
+struct Request {
+    let userMessage: String
+    let botMessage: String
+    let options: [String]
+    let identifier: String
+}

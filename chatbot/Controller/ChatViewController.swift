@@ -10,8 +10,17 @@ import UIKit
 class ChatViewController: UIViewController {
     
     var Messages : [Message] = []
+    var messageBrain = MessageBrain()
 
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var button1: RoundedButton!
+    @IBOutlet weak var button2: RoundedButton!
+    @IBOutlet weak var button3: RoundedButton!
+    @IBOutlet weak var button4: RoundedButton!
+    @IBOutlet weak var button5: RoundedButton!
+    @IBOutlet weak var button6: RoundedButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,49 +28,47 @@ class ChatViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "userCell")
         tableView.register(UINib(nibName: "BotCell", bundle: nil), forCellReuseIdentifier: "botCell")
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        self.hideKeyboardWhenTappedAround()
         
     }
 
-    @IBAction func latestPressed(_ sender: UIButton) {
-        Messages.append(Message(message: "Latest", bot: false))
-        Messages.append(Message(message: "Fetching latest...", bot: true))
-        tableView.reloadData()
-        let indexPath = IndexPath(row: self.Messages.count-1 , section: 0)
-        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-    }
-    
-    @IBAction func matchesPressed(_ sender: UIButton) {
-        Messages.append(Message(message: "Matches", bot: false))
-        Messages.append(Message(message: "Fetching matches...", bot: true))
-        tableView.reloadData()
-        let indexPath = IndexPath(row: self.Messages.count-1 , section: 0)
-        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-    }
-    
-    @IBAction func teamPressed(_ sender: Any) {
-        Messages.append(Message(message: "Teams", bot: false))
-        Messages.append(Message(message: "Fetching teams...", bot: true))
-        tableView.reloadData()
-        let indexPath = IndexPath(row: self.Messages.count-1 , section: 0)
-        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-    }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
+    @IBAction func optionPressed(_ sender: UIButton) {
+        let input = sender.currentTitle!
+        if input == "Quit" {
+            Messages = []
+            tableView.reloadData()
+            button1.isHidden = false
+            button2.isHidden = false
+            button3.isHidden = false
+            button4.isHidden = false
+            button5.isHidden = false
+            button6.isHidden = false
+            button1.setTitle("Matches", for: .normal)
+            button2.setTitle("Teams", for: .normal)
+            button3.setTitle("Players", for: .normal)
+            button4.setTitle("Schedule", for: .normal)
+            button5.setTitle("Predict", for: .normal)
+            button6.setTitle("Ask", for: .normal)
+        } else {
+            let request = messageBrain.follow(input: input)
+            let userMessage = Message(message: request.userMessage, bot: false)
+            let botMessage = Message(message: request.botMessage, bot: true)
+            Messages.append(userMessage)
+            Messages.append(botMessage)
+            tableView.reloadData()
+            let prompts = request.options
+            button1.setTitle( "\(prompts[0])" , for: .normal )
+            button2.setTitle( "\(prompts[1])" , for: .normal )
+            button3.isHidden = true
+            button4.isHidden = true
+            button5.isHidden = true
+            button6.isHidden = true
         }
+        
     }
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-        }
+    
+    @IBAction func askPressed(_ sender: Any) {
     }
+    
 }
 
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
@@ -80,24 +87,10 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             cell.messageLabel.text = message.message
             return cell
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         50
     }
-    
-    
 }
 
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
