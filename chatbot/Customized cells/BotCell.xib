@@ -9,45 +9,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="botCell" rowHeight="117" id="KGk-i7-Jjw" customClass="BotCell" customModule="chatbot" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="322" height="117"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="botCell" rowHeight="325" id="KGk-i7-Jjw" customClass="BotCell" customModule="chatbot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="325"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="322" height="117"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="325"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cricbot" translatesAutoresizingMaskIntoConstraints="NO" id="zmn-60-ecH">
-                        <rect key="frame" x="0.0" y="14" width="50" height="50"/>
+                        <rect key="frame" x="0.0" y="5" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="O2X-0h-C6M"/>
                             <constraint firstAttribute="height" constant="50" id="dDS-On-S0I"/>
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online" translatesAutoresizingMaskIntoConstraints="NO" id="wke-oc-Z5E">
-                        <rect key="frame" x="30" y="49" width="10" height="10"/>
+                        <rect key="frame" x="30" y="40" width="10" height="10"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="UIo-PY-OLz"/>
                             <constraint firstAttribute="width" constant="10" id="tPX-zW-fH5"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-Qv-6vp">
-                        <rect key="frame" x="52" y="15.5" width="87.5" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-Qv-6vp">
+                        <rect key="frame" x="52" y="8" width="250" height="284.5"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="dZu-jZ-loU"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="ibT-uC-ACV"/>
                         </constraints>
+                        <mutableString key="text">Sachin Tendulkar has been the most complete batsman of his time, the most prolific runmaker of all time, and arguably the biggest cricket icon the game has ever known. His batting was based on the purest principles: perfect balance, economy of movement, precision in stroke-making, and that intangible quality given only to geniuses - anticipation. If he didn't have a signature stroke - the upright, back-foot punch comes close - it's because he was equally proficient at each of the full range of orthodox shots (and plenty of improvised ones as well) and can pull them out at will.</mutableString>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zmn-60-ecH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2jq-qX-oJa"/>
                     <constraint firstItem="zPH-Qv-6vp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AhD-5T-L5b"/>
                     <constraint firstItem="wke-oc-Z5E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Auq-Xk-Pw6"/>
-                    <constraint firstItem="zPH-Qv-6vp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4.5" id="Buu-Mc-gVV"/>
-                    <constraint firstItem="zmn-60-ecH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="GFw-Ch-a5Y"/>
+                    <constraint firstItem="zmn-60-ecH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="GFw-Ch-a5Y"/>
                     <constraint firstItem="zPH-Qv-6vp" firstAttribute="leading" secondItem="zmn-60-ecH" secondAttribute="trailing" constant="2" id="KFJ-J6-XyS"/>
+                    <constraint firstItem="zPH-Qv-6vp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="L4z-K2-eqG"/>
                     <constraint firstItem="zmn-60-ecH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rc6-40-mrW"/>
                     <constraint firstItem="wke-oc-Z5E" firstAttribute="top" secondItem="zmn-60-ecH" secondAttribute="topMargin" constant="27" id="ui1-Pb-8wv"/>
                 </constraints>
@@ -56,7 +56,7 @@
             <connections>
                 <outlet property="messageLabel" destination="zPH-Qv-6vp" id="Ej1-43-zWE"/>
             </connections>
-            <point key="canvasLocation" x="-5.7971014492753632" y="41.852678571428569"/>
+            <point key="canvasLocation" x="-5.7971014492753632" y="111.49553571428571"/>
         </tableViewCell>
     </objects>
     <resources>

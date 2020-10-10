@@ -188,7 +188,6 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         
         else if message.type == "profile" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileCell
-            cell.name.text = data.player
             return cell
         }
         
@@ -218,6 +217,10 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         
         else if message.type == "predict" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
+            cell.loserScore.text = ""
+            cell.winnerScore.text = ""
+            cell.date.text = ""
+            cell.city.text = ""
             return cell
         }
         
