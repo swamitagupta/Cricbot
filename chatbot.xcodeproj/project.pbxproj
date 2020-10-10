@@ -22,6 +22,9 @@
 		702C85692530D03C0054ECBD /* BotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C85672530D03C0054ECBD /* BotCell.xib */; };
 		702C856E2530D9AB0054ECBD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C856D2530D9AB0054ECBD /* Message.swift */; };
 		702C8573253174230054ECBD /* MessageBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C8572253174230054ECBD /* MessageBrain.swift */; };
+		702C857925319FB20054ECBD /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C857725319FB20054ECBD /* FilterCell.swift */; };
+		702C857A25319FB20054ECBD /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C857825319FB20054ECBD /* FilterCell.xib */; };
+		702C857F2531AE390054ECBD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C857E2531AE390054ECBD /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		702C85672530D03C0054ECBD /* BotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotCell.xib; sourceTree = "<group>"; };
 		702C856D2530D9AB0054ECBD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		702C8572253174230054ECBD /* MessageBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBrain.swift; sourceTree = "<group>"; };
+		702C857725319FB20054ECBD /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		702C857825319FB20054ECBD /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		702C857E2531AE390054ECBD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 		702C8552253088320054ECBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				702C857E2531AE390054ECBD /* Data.swift */,
 				702C85562530B9D50054ECBD /* RoundedButton.swift */,
 				702C856D2530D9AB0054ECBD /* Message.swift */,
 				702C8572253174230054ECBD /* MessageBrain.swift */,
@@ -177,6 +184,8 @@
 				702C855D2530C1D30054ECBD /* UserCell.xib */,
 				702C85662530D03C0054ECBD /* BotCell.swift */,
 				702C85672530D03C0054ECBD /* BotCell.xib */,
+				702C857725319FB20054ECBD /* FilterCell.swift */,
+				702C857825319FB20054ECBD /* FilterCell.xib */,
 			);
 			path = "Customized cells";
 			sourceTree = "<group>";
@@ -287,6 +296,7 @@
 				702C855F2530C1D30054ECBD /* UserCell.xib in Resources */,
 				702C85692530D03C0054ECBD /* BotCell.xib in Resources */,
 				702C852A253086370054ECBD /* LaunchScreen.storyboard in Resources */,
+				702C857A25319FB20054ECBD /* FilterCell.xib in Resources */,
 				702C8527253086370054ECBD /* Assets.xcassets in Resources */,
 				702C8525253086330054ECBD /* Main.storyboard in Resources */,
 			);
@@ -314,12 +324,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				702C8522253086330054ECBD /* ChatViewController.swift in Sources */,
+				702C857F2531AE390054ECBD /* Data.swift in Sources */,
 				702C851E253086330054ECBD /* AppDelegate.swift in Sources */,
 				702C8520253086330054ECBD /* SceneDelegate.swift in Sources */,
 				702C85682530D03C0054ECBD /* BotCell.swift in Sources */,
 				702C855E2530C1D30054ECBD /* UserCell.swift in Sources */,
 				702C85572530B9D50054ECBD /* RoundedButton.swift in Sources */,
 				702C8573253174230054ECBD /* MessageBrain.swift in Sources */,
+				702C857925319FB20054ECBD /* FilterCell.swift in Sources */,
 				702C856E2530D9AB0054ECBD /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
