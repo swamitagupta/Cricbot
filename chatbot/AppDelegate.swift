@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import AWSCore
+import AWSCognito
+import AWSLex
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:3629feb7-fe82-4f41-87a1-241923cb1a8e")
+        
+        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        let chatConfig = AWSLexInteractionKitConfig.defaultInteractionKitConfig(withBotName: "IPL_Bot", botAlias: "$LATEST")
+        AWSLexInteractionKit.register(with: configuration!, interactionKitConfiguration: chatConfig, forKey: "chatConfig")
+        
         return true
     }
 

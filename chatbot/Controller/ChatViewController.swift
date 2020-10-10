@@ -6,8 +6,22 @@
 //
 
 import UIKit
+import AWSLex
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, AWSLexInteractionDelegate {
+    
+    var interactionKit: AWSLexInteractionKit?
+    
+    
+    func interactionKit(_ interactionKit: AWSLexInteractionKit, onError error: Error) {
+        print("interactionKit error: \(error)")
+    }
+    
+    func setUpLex(){
+        self.interactionKit = AWSLexInteractionKit.init(forKey: "chatConfig")
+        self.interactionKit?.interactionDelegate = self
+    }
+    
     
     
     var Messages : [Message] = []

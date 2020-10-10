@@ -261,7 +261,7 @@
                                 <state key="normal" image="mic" catalog="system"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8le-VV-XTe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="563"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -277,7 +277,7 @@
                             <constraint firstItem="Uqo-PO-Vlf" firstAttribute="bottom" secondItem="PtI-23-XCI" secondAttribute="bottom" constant="13" id="KQs-bq-Vo4"/>
                             <constraint firstItem="PtI-23-XCI" firstAttribute="leading" secondItem="0B8-CS-Gvt" secondAttribute="trailing" constant="10" id="RiL-pR-UhS"/>
                             <constraint firstItem="PtI-23-XCI" firstAttribute="top" secondItem="8le-VV-XTe" secondAttribute="bottom" constant="15" id="hFR-cp-jHs"/>
-                            <constraint firstItem="8le-VV-XTe" firstAttribute="top" secondItem="Uqo-PO-Vlf" secondAttribute="top" id="n3I-fC-hb0"/>
+                            <constraint firstItem="8le-VV-XTe" firstAttribute="top" secondItem="Uqo-PO-Vlf" secondAttribute="top" constant="10" id="n3I-fC-hb0"/>
                             <constraint firstItem="0B8-CS-Gvt" firstAttribute="leading" secondItem="Uqo-PO-Vlf" secondAttribute="leading" constant="16" id="n5f-WU-dXV"/>
                         </constraints>
                     </view>
