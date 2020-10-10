@@ -37,6 +37,7 @@
 		702C85AD2531DDD30054ECBD /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C85AB2531DDD30054ECBD /* SearchCell.xib */; };
 		702C85B22531F1DF0054ECBD /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85B12531F1DF0054ECBD /* TextViewController.swift */; };
 		702C85B7253204F50054ECBD /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85B6253204F50054ECBD /* Teams.swift */; };
+		702C85BC25321F480054ECBD /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85BB25321F480054ECBD /* Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		702C85AB2531DDD30054ECBD /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		702C85B12531F1DF0054ECBD /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		702C85B6253204F50054ECBD /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		702C85BB25321F480054ECBD /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				702C856D2530D9AB0054ECBD /* Message.swift */,
 				702C8572253174230054ECBD /* MessageBrain.swift */,
 				702C85B6253204F50054ECBD /* Teams.swift */,
+				702C85BB25321F480054ECBD /* Text.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				702C85AC2531DDD30054ECBD /* SearchCell.swift in Sources */,
 				702C8522253086330054ECBD /* ChatViewController.swift in Sources */,
 				702C857F2531AE390054ECBD /* Data.swift in Sources */,
+				702C85BC25321F480054ECBD /* Text.swift in Sources */,
 				702C85A52531DA270054ECBD /* StatsCell.swift in Sources */,
 				702C851E253086330054ECBD /* AppDelegate.swift in Sources */,
 				702C85972531C8600054ECBD /* MatchCell.swift in Sources */,
