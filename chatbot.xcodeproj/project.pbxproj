@@ -38,6 +38,8 @@
 		702C85B22531F1DF0054ECBD /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85B12531F1DF0054ECBD /* TextViewController.swift */; };
 		702C85B7253204F50054ECBD /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85B6253204F50054ECBD /* Teams.swift */; };
 		702C85BC25321F480054ECBD /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85BB25321F480054ECBD /* Text.swift */; };
+		702C85C125322B570054ECBD /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85C025322B570054ECBD /* Matches.swift */; };
+		702C85C625322E480054ECBD /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85C525322E480054ECBD /* MatchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		702C85B12531F1DF0054ECBD /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		702C85B6253204F50054ECBD /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		702C85BB25321F480054ECBD /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		702C85C025322B570054ECBD /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
+		702C85C525322E480054ECBD /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 				702C8572253174230054ECBD /* MessageBrain.swift */,
 				702C85B6253204F50054ECBD /* Teams.swift */,
 				702C85BB25321F480054ECBD /* Text.swift */,
+				702C85C025322B570054ECBD /* Matches.swift */,
+				702C85C525322E480054ECBD /* MatchData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,10 +377,12 @@
 				702C85AC2531DDD30054ECBD /* SearchCell.swift in Sources */,
 				702C8522253086330054ECBD /* ChatViewController.swift in Sources */,
 				702C857F2531AE390054ECBD /* Data.swift in Sources */,
+				702C85C125322B570054ECBD /* Matches.swift in Sources */,
 				702C85BC25321F480054ECBD /* Text.swift in Sources */,
 				702C85A52531DA270054ECBD /* StatsCell.swift in Sources */,
 				702C851E253086330054ECBD /* AppDelegate.swift in Sources */,
 				702C85972531C8600054ECBD /* MatchCell.swift in Sources */,
+				702C85C625322E480054ECBD /* MatchData.swift in Sources */,
 				702C85B22531F1DF0054ECBD /* TextViewController.swift in Sources */,
 				702C8520253086330054ECBD /* SceneDelegate.swift in Sources */,
 				702C85682530D03C0054ECBD /* BotCell.swift in Sources */,
