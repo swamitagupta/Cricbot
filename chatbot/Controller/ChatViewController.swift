@@ -26,12 +26,28 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "userCell")
         tableView.register(UINib(nibName: "BotCell", bundle: nil), forCellReuseIdentifier: "botCell")
         tableView.register(UINib(nibName: "FilterCell", bundle: nil), forCellReuseIdentifier: "filterCell")
-        
+        tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "searchCell")
+        tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "profileCell")
+        tableView.register(UINib(nibName: "MatchCell", bundle: nil), forCellReuseIdentifier: "matchCell")
+        //NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
     }
 
+    //MARK: - Func optionPressed
+    
     @IBAction func optionPressed(_ sender: UIButton) {
         let input = sender.currentTitle!
         if input == "Quit" {
@@ -74,15 +90,23 @@ class ChatViewController: UIViewController {
                     Messages.append(Message(message: "year", type: "select"))
                     Messages.append(Message(message: "city", type: "select"))
                 }
-                else if id == "player" {
-                    Messages.append(Message(message: "player", type: "select"))
-                }
+                
                 else if id == "two teams" {
                     Messages.append(Message(message: "team A", type: "select"))
                     Messages.append(Message(message: "team B", type: "select"))
                 }
-                tableView.reloadData()
+                
             }
+            else if request.type == "search" {
+                Messages.append(Message(message: "player", type: "search"))
+            }
+            
+            else if request.type == "show" {
+                Messages.append(Message(message: "player", type: "profile"))
+            }
+            
+            tableView.reloadData()
+            tableView.reloadData()
             let indexPath = NSIndexPath(row: Messages.count-1, section: 0)
             tableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
             
@@ -93,7 +117,14 @@ class ChatViewController: UIViewController {
     @IBAction func askPressed(_ sender: Any) {
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
+    
 }
+
+//MARK: - Table View extension
 
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -111,6 +142,16 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         } else if message.type == "bot" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "botCell", for: indexPath) as! BotCell
             cell.messageLabel.text = message.message
+            return cell
+        }
+        
+        else if message.type == "search" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchCell
+            return cell
+        }
+        
+        else if message.type == "profile" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileCell
             return cell
         }
         
@@ -137,7 +178,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     }
     /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        50
+        100
     }*/
 }
 

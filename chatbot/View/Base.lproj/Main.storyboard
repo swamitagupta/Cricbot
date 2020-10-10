@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MLf-1x-598">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -97,7 +97,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hah-ri-sS8" userLabel="Prompt Stack">
-                                <rect key="frame" x="14" y="594" width="328" height="30"/>
+                                <rect key="frame" x="14" y="550" width="328" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwx-mL-CUn" customClass="RoundedButton" customModule="chatbot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
@@ -138,11 +138,11 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="myr-Jr-cQG">
-                                <rect key="frame" x="5" y="201" width="365" height="385"/>
+                                <rect key="frame" x="5" y="201" width="365" height="341"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Vhl-hc-EQq" userLabel="Prompt Stack">
-                                <rect key="frame" x="14" y="632" width="328" height="30"/>
+                                <rect key="frame" x="14" y="588" width="328" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krp-uK-251" customClass="RoundedButton" customModule="chatbot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
@@ -178,12 +178,13 @@
                                         </state>
                                         <connections>
                                             <action selector="askPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2O-aC-dSO"/>
+                                            <segue destination="uSV-bz-H1J" kind="show" id="OTo-2U-8qz"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-lo-HNr">
-                                <rect key="frame" x="343" y="635" width="17" height="22"/>
+                                <rect key="frame" x="343" y="591" width="17" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="mic" catalog="system"/>
                             </button>
@@ -221,6 +222,9 @@
                             <constraint firstItem="kSf-9R-YYq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="yxa-zL-oNR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ukt-6r-Deb">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="tbV-8Y-80K"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="button1" destination="rwx-mL-CUn" id="GvC-NW-6Zs"/>
                         <outlet property="button2" destination="iC4-PG-5Vo" id="rmd-uf-CfM"/>
@@ -232,6 +236,78 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="76.911544227886068"/>
+        </scene>
+        <!--Cricbot-->
+        <scene sceneID="Ric-HQ-a44">
+            <objects>
+                <viewController id="uSV-bz-H1J" customClass="TextViewController" customModule="chatbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2iQ-nA-IBc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B8-CS-Gvt">
+                                <rect key="frame" x="16" y="581" width="297" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="Fo3-Ih-NcI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtI-23-XCI">
+                                <rect key="frame" x="323" y="588" width="37" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="mic" catalog="system"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8le-VV-XTe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uqo-PO-Vlf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="trailing" secondItem="PtI-23-XCI" secondAttribute="trailing" constant="15" id="5wj-iL-LqQ"/>
+                            <constraint firstItem="8le-VV-XTe" firstAttribute="trailing" secondItem="Uqo-PO-Vlf" secondAttribute="trailing" id="AZY-Ak-WmP"/>
+                            <constraint firstItem="8le-VV-XTe" firstAttribute="leading" secondItem="Uqo-PO-Vlf" secondAttribute="leading" id="Akd-hC-00M"/>
+                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="bottom" secondItem="0B8-CS-Gvt" secondAttribute="bottom" constant="8" id="FU9-zI-Eoi"/>
+                            <constraint firstItem="0B8-CS-Gvt" firstAttribute="top" secondItem="8le-VV-XTe" secondAttribute="bottom" constant="8" symbolic="YES" id="Jdt-ud-iJL"/>
+                            <constraint firstItem="0B8-CS-Gvt" firstAttribute="top" secondItem="8le-VV-XTe" secondAttribute="bottom" constant="8" symbolic="YES" id="KLW-Qk-URA"/>
+                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="bottom" secondItem="PtI-23-XCI" secondAttribute="bottom" constant="13" id="KQs-bq-Vo4"/>
+                            <constraint firstItem="PtI-23-XCI" firstAttribute="leading" secondItem="0B8-CS-Gvt" secondAttribute="trailing" constant="10" id="RiL-pR-UhS"/>
+                            <constraint firstItem="PtI-23-XCI" firstAttribute="top" secondItem="8le-VV-XTe" secondAttribute="bottom" constant="15" id="hFR-cp-jHs"/>
+                            <constraint firstItem="8le-VV-XTe" firstAttribute="top" secondItem="Uqo-PO-Vlf" secondAttribute="top" id="n3I-fC-hb0"/>
+                            <constraint firstItem="0B8-CS-Gvt" firstAttribute="leading" secondItem="Uqo-PO-Vlf" secondAttribute="leading" constant="16" id="n5f-WU-dXV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cricbot" id="dQu-fg-Nzr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x36-cB-VEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535.2" y="76.911544227886068"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i7x-ZZ-UGE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MLf-1x-598" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wfR-ZP-ZOO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="cricPurple"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="cricPurple"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OtK-RZ-GWn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k88-Ru-542" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-149.59999999999999" y="76.911544227886068"/>
         </scene>

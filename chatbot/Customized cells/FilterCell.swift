@@ -17,11 +17,19 @@ class FilterCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource{
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        yearTextField.inputView = myPicker
+        print("\(object) bahagaha")
+        if object == "player" {
+            yearTextField.inputView = nil
+        } else {
+            yearTextField.inputView = myPicker
+        }
         myPicker.delegate = self
         yearTextField.text = ""
+        super.awakeFromNib()
         // Initialization code
     }
+    
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

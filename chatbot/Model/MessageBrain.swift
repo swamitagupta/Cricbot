@@ -30,11 +30,11 @@ struct MessageBrain {
         Request(userMessage: "Compare", botMessage: "Team comparision...", options: ["vs team", "Quit"], type: "", identifier: "id"),
         
         //PLAYERS
-        Request(userMessage: "Players", botMessage: "Select player", options: ["Find player", "Quit"], type: "select", identifier: "player"),
+        Request(userMessage: "Players", botMessage: "Search player", options: ["Find player", "Quit"], type: "search", identifier: "player"),
         
-        Request(userMessage: "Find player", botMessage: "Your player is", options: ["Search player","Quit"], type: "", identifier: "id"),
+        Request(userMessage: "Find player", botMessage: "Your player is", options: ["Search player","Quit"], type: "show", identifier: "profile"),
         
-        Request(userMessage: "Search player", botMessage: "Select player", options: ["Find player", "Quit"], type: "select", identifier: "player"),
+        Request(userMessage: "Search player", botMessage: "Search player", options: ["Find player", "Quit"], type: "search", identifier: "player"),
         
         //SCHEDULE
         Request(userMessage: "Schedule", botMessage: "Select your option", options: ["Live scores", "Upcoming"], type: "", identifier: "id"),
