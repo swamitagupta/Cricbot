@@ -8,7 +8,18 @@
 import UIKit
 
 class StatsCell: UITableViewCell {
+    
+    var stats = Teams()
+    
 
+    @IBOutlet weak var teamNane: UILabel!
+    @IBOutlet weak var teamLogo: UIImageView!
+    
+    @IBOutlet weak var matchesValue: UILabel!
+    @IBOutlet weak var winValue: UILabel!
+    @IBOutlet weak var lossValue: UILabel!
+    @IBOutlet weak var winPercent: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,8 +9,10 @@ import UIKit
 
 class ChatViewController: UIViewController {
     
+    
     var Messages : [Message] = []
     var messageBrain = MessageBrain()
+    var stats = Teams()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,14 +28,15 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableView.automaticDimension
+        //tableView.estimatedRowHeight = 100
+        //tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "userCell")
         tableView.register(UINib(nibName: "BotCell", bundle: nil), forCellReuseIdentifier: "botCell")
         tableView.register(UINib(nibName: "FilterCell", bundle: nil), forCellReuseIdentifier: "filterCell")
         tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "searchCell")
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "profileCell")
         tableView.register(UINib(nibName: "MatchCell", bundle: nil), forCellReuseIdentifier: "matchCell")
+        tableView.register(UINib(nibName: "StatsCell", bundle: nil), forCellReuseIdentifier: "statsCell")
         //NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         //NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -84,7 +87,7 @@ class ChatViewController: UIViewController {
             
             if request.type == "select" {
                 if id == "team" {
-                    Messages.append(Message(message: "team", type: "select"))
+                    Messages.append(Message(message: "team A", type: "select"))
                 }
                 else if id == "filter" {
                     Messages.append(Message(message: "year", type: "select"))
@@ -103,6 +106,14 @@ class ChatViewController: UIViewController {
             
             else if request.type == "show" {
                 Messages.append(Message(message: "player", type: "profile"))
+            }
+            
+            else if request.type == "stats" {
+                Messages.append(Message(message: "team", type: "stats"))
+            }
+            
+            else if request.type == "match" {
+                Messages.append(Message(message: "match", type: id)) //match, live, predict
             }
             
             tableView.reloadData()
@@ -152,6 +163,36 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         
         else if message.type == "profile" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileCell
+            cell.name.text = data.player
+            return cell
+        }
+        
+        else if message.type == "stats" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "statsCell", for: indexPath) as! StatsCell
+            var team = data.teamA
+            var teamData = stats.fetch(input: team)
+            print("Hello")
+            print(team)
+            cell.teamNane.text = team
+            cell.matchesValue.text = String(teamData.matches)
+            cell.winValue.text = String(teamData.win)
+            cell.lossValue.text = String(teamData.loss)
+            cell.winPercent.text = String(teamData.winPercent)
+            return cell
+        }
+        
+        else if message.type == "match" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
+            return cell
+        }
+        
+        else if message.type == "live" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
+            return cell
+        }
+        
+        else if message.type == "predict" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
             return cell
         }
         
@@ -178,7 +219,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     }
     /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        200
     }*/
 }
 

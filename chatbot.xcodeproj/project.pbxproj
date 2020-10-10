@@ -36,6 +36,7 @@
 		702C85AC2531DDD30054ECBD /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85AA2531DDD30054ECBD /* SearchCell.swift */; };
 		702C85AD2531DDD30054ECBD /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C85AB2531DDD30054ECBD /* SearchCell.xib */; };
 		702C85B22531F1DF0054ECBD /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85B12531F1DF0054ECBD /* TextViewController.swift */; };
+		702C85B7253204F50054ECBD /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C85B6253204F50054ECBD /* Teams.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		702C85AA2531DDD30054ECBD /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		702C85AB2531DDD30054ECBD /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		702C85B12531F1DF0054ECBD /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		702C85B6253204F50054ECBD /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				702C85562530B9D50054ECBD /* RoundedButton.swift */,
 				702C856D2530D9AB0054ECBD /* Message.swift */,
 				702C8572253174230054ECBD /* MessageBrain.swift */,
+				702C85B6253204F50054ECBD /* Teams.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				702C85572530B9D50054ECBD /* RoundedButton.swift in Sources */,
 				702C8573253174230054ECBD /* MessageBrain.swift in Sources */,
 				702C857925319FB20054ECBD /* FilterCell.swift in Sources */,
+				702C85B7253204F50054ECBD /* Teams.swift in Sources */,
 				702C856E2530D9AB0054ECBD /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

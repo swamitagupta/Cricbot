@@ -51,6 +51,7 @@ class FilterCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource{
         yearTextField.text = pickerData[row]
         if object == "team A"{
             data.teamA = pickerData[row]
+            print(data.teamA)
         } else if object == "team B" {
             data.teamB = pickerData[row]
         } else if object == "player" {
