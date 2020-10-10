@@ -64,11 +64,6 @@ class TextViewController: UIViewController, AWSLexInteractionDelegate, UITextFie
             return
         }
         receiveMessage(text: response)
-    //show response on screen
-        /*DispatchQueue.main.async{
-            var answer = response
-            print(answer)
-        }*/
     }
     
     override func viewDidLoad() {
@@ -79,8 +74,23 @@ class TextViewController: UIViewController, AWSLexInteractionDelegate, UITextFie
         tableView.register(UINib(nibName: "BotCell", bundle: nil), forCellReuseIdentifier: "botCell")
         textField.delegate = self
         setUpLex()
-
+        /*NotificationCenter.default.addObserver(self, selector: #selector(TextViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TextViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)*/
+        }
+    
+    
+    /*
+    @objc func keyboardWillShow(_ notification:Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.view.frame.origin.y -= keyboardSize.height
+        }
     }
+
+    @objc func keyboardWillHide(_ notification:Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            self.view.frame.origin.y += keyboardSize.height
+        }
+    }*/
     
 }
 

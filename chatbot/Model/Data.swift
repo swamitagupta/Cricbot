@@ -35,6 +35,51 @@ let teams = [ "Mumbai Indians",
 
 let players = ["Sachin Tendulkar"]
 
-let years = ["2000"]
+let years = [
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019"
+]
 
-let cities = ["Delhi"]
+let cities = ["Abu Dhabi",
+              "Ahmedabad",
+              "Bangalore" ,
+              "Bengaluru",
+              "Bloemfontein",
+              "Cape Town",
+              "Centurion",
+              "Chandigarh",
+              "Chennai",
+              "Cuttack",
+              "Delhi",
+              "Dharamsala",
+              "Durban",
+              "East London",
+              "Hyderabad",
+              "Indore" ,
+              "Jaipur",
+              "Johannesburg",
+              "Kanpur",
+              "Kimberley",
+              "Kochi",
+              "Kolkata",
+              "Mohali",
+              "Mumbai" ,
+              "Nagpur",
+              "Port Elizabeth",
+              "Pune",
+              "Raipur",
+              "Rajkot",
+              "Ranchi",
+              "Sharjah",
+              "Visakhapatnam"
+]

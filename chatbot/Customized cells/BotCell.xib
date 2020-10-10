@@ -48,6 +48,7 @@
                     <constraint firstItem="zmn-60-ecH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="GFw-Ch-a5Y"/>
                     <constraint firstItem="zPH-Qv-6vp" firstAttribute="leading" secondItem="zmn-60-ecH" secondAttribute="trailing" constant="2" id="KFJ-J6-XyS"/>
                     <constraint firstItem="zPH-Qv-6vp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="L4z-K2-eqG"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zmn-60-ecH" secondAttribute="bottom" constant="5" id="PCI-nu-vdd"/>
                     <constraint firstItem="zmn-60-ecH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rc6-40-mrW"/>
                     <constraint firstItem="wke-oc-Z5E" firstAttribute="top" secondItem="zmn-60-ecH" secondAttribute="topMargin" constant="27" id="ui1-Pb-8wv"/>
                 </constraints>
