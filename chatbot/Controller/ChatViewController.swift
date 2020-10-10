@@ -51,6 +51,7 @@ class ChatViewController: UIViewController, AWSLexInteractionDelegate {
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "profileCell")
         tableView.register(UINib(nibName: "MatchCell", bundle: nil), forCellReuseIdentifier: "matchCell")
         tableView.register(UINib(nibName: "StatsCell", bundle: nil), forCellReuseIdentifier: "statsCell")
+        tableView.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: "listCell")
         //NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         //NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -130,6 +131,14 @@ class ChatViewController: UIViewController, AWSLexInteractionDelegate {
                 Messages.append(Message(message: "match", type: id)) //match, live, predict
             }
             
+            else if request.type == "list" {
+                if id == "match" {
+                    Messages.append(Message(message: "match", type: "list"))
+                } else {
+                    Messages.append(Message(message: "schedule", type: "list"))
+                }
+            }
+            
             tableView.reloadData()
             tableView.reloadData()
             let indexPath = NSIndexPath(row: Messages.count-1, section: 0)
@@ -164,7 +173,9 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
             cell.messageLabel.text = message.message
             return cell
-        } else if message.type == "bot" {
+        }
+        
+        else if message.type == "bot" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "botCell", for: indexPath) as! BotCell
             cell.messageLabel.text = message.message
             return cell
@@ -207,6 +218,11 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         
         else if message.type == "predict" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
+            return cell
+        }
+        
+        else if message.type == "list" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCell
             return cell
         }
         
