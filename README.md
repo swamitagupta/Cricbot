@@ -64,8 +64,8 @@ replace the XXXXXs with your own id
 
 ### Amazon Lex Console 
 
-![Screenshot](/images/snap1.png)
+![Screenshot](/images/snap1.jpg)
 
-![Screenshot](/images/snap2.png)
+![Screenshot](/images/snap2.jpg)
 
-![Screenshot](/images/snap3.png)
+![Screenshot](/images/snap3.jpg)
