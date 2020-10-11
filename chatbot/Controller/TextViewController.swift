@@ -78,6 +78,7 @@ class TextViewController: UIViewController, AWSLexInteractionDelegate, UITextFie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "userCell")
@@ -112,23 +113,35 @@ class TextViewController: UIViewController, AWSLexInteractionDelegate, UITextFie
                     self.micButton.isEnabled = isButtonEnabled
                 }
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(TextViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(TextViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
-    @objc func keyboardWillShow(_ notification:Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            self.view.frame.origin.y -= keyboardSize.height
-        }
+    @objc func keyboardWillHide() {
+        self.view.frame.origin.y = -10
     }
 
-    @objc func keyboardWillHide(_ notification:Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            self.view.frame.origin.y += keyboardSize.height
+    @objc func keyboardWillChange(notification: NSNotification) {
+
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if textField.isFirstResponder {
+                self.view.frame.origin.y = -keyboardSize.height
+            }
         }
     }
+    
     @IBAction func micTapped(_ sender: UIButton) {
         if audioEngine.isRunning {
                 audioEngine.stop()

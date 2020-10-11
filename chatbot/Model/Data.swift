@@ -36,9 +36,13 @@ struct Data {
     var winner3: String
 }
 
-var data = Data(teamA: "", teamB: "", player: "", year: "'2017-04-14'", city: "Bangalore", scoreA: "", scoreB: "", prediction: "",
-                winner: "Mumbai Indian", team2A: "", team2B: "", year2: "", city2: "", score2A: "", score2B: "", winner2: "",
-                team3A: "", team3B: "", year3: "", city3: "", score3A: "", score3B: "", winner3: "")
+/*
+ [OrderedDict([('id', '12'), ('season', '2017'), ('city', 'Bangalore'), ('date', '2017-04-14'), ('team1', 'Royal Challengers Bangalore'), ('team2', 'Mumbai Indians'), ('toss_winner', 'Mumbai Indians'), ('toss_decision', 'field'), ('result', 'normal'), ('dl_applied', '0'), ('winner', 'Mumbai Indians'), ('win_by_runs', '0'), ('win_by_wickets', '4'), ('player_of_match', 'KA Pollard'), ('venue', 'M Chinnaswamy Stadium'), ('umpire1', 'KN Ananthapadmanabhan'), ('umpire2', 'AK Chaudhary'), ('umpire3', '')]), OrderedDict([('id', '37'), ('season', '2017'), ('city', 'Mumbai'), ('date', '2017-05-01'), ('team1', 'Royal Challengers Bangalore'), ('team2', 'Mumbai Indians'), ('toss_winner', 'Royal Challengers Bangalore'), ('toss_decision', 'bat'), ('result', 'normal'), ('dl_applied', '0'), ('winner', 'Mumbai Indians'), ('win_by_runs', '0'), ('win_by_wickets', '5'), ('player_of_match', 'RG Sharma'), ('venue', 'Wankhede Stadium'), ('umpire1', 'AK Chaudhary'), ('umpire2', 'CB Gaffaney'), ('umpire3', '')])]
+ */
+
+var data = Data(teamA: "Royal Challengers Bangalore", teamB: "Mumbai Indians", player: "", year: "'2017-04-14'", city: "Bangalore", scoreA: "", scoreB: "", prediction: "0.572",
+                winner: "Mumbai Indian", team2A: "Royal Challengers Bangalore", team2B: "Mumbai Indians", year2: "2017-05-01", city2: "Mumbai", score2A: "", score2B: "", winner2: "Mumbai Indians",
+                team3A: "Royal Challengers Bangalore", team3B: "Mumbai Indians", year3: "2020-09-28", city3: "", score3A: "", score3B: "", winner3: "Royal Challengers Bangalore")
 
 let teams = [ "Mumbai Indians",
     "Pune Warriors",
