@@ -25,7 +25,7 @@ struct MessageBrain {
         
         Request(userMessage: "Search team", botMessage: "Your team stats are", options: ["More info", "Quit"], type: "stats", identifier: "id"),
         
-        Request(userMessage: "More info", botMessage: "Explore your team", options: ["Search team", "Quit"], type: "select", identifier: "team"),
+        Request(userMessage: "More info", botMessage: "Explore your team", options: ["Search team", "Quit"], type: "info", identifier: "team"),
         
         
         //PLAYERS

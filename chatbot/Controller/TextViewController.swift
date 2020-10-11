@@ -48,6 +48,7 @@ class TextViewController: UIViewController, AWSLexInteractionDelegate, UITextFie
     
     func receiveMessage(text: String){
         Messages.append(Text(content: text, bot: true))
+        print(text)
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }

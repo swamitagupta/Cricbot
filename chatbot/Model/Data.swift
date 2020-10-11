@@ -14,9 +14,31 @@ struct Data {
     var year: String
     var city: String
     
+    var scoreA: String
+    var scoreB: String
+    var prediction: String
+    var winner: String
+    
+    var team2A: String
+    var team2B: String
+    var year2: String
+    var city2: String
+    var score2A: String
+    var score2B: String
+    var winner2: String
+    
+    var team3A: String
+    var team3B: String
+    var year3: String
+    var city3: String
+    var score3A: String
+    var score3B: String
+    var winner3: String
 }
 
-var data = Data(teamA: "", teamB: "", player: "", year: "", city: "")
+var data = Data(teamA: "", teamB: "", player: "", year: "", city: "", scoreA: "", scoreB: "", prediction: "",
+                winner: "", team2A: "", team2B: "", year2: "", city2: "", score2A: "", score2B: "", winner2: "",
+                team3A: "", team3B: "", year3: "", city3: "", score3A: "", score3B: "", winner3: "")
 
 let teams = [ "Mumbai Indians",
     "Pune Warriors",
@@ -35,7 +57,7 @@ let teams = [ "Mumbai Indians",
 
 let players = ["Sachin Tendulkar"]
 
-let years = [
+let years = ["",
     "2008",
     "2009",
     "2010",
@@ -50,7 +72,7 @@ let years = [
     "2019"
 ]
 
-let cities = ["Abu Dhabi",
+let cities = ["","Abu Dhabi",
               "Ahmedabad",
               "Bangalore" ,
               "Bengaluru",
@@ -83,3 +105,4 @@ let cities = ["Abu Dhabi",
               "Sharjah",
               "Visakhapatnam"
 ]
+

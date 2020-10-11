@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="184" id="KGk-i7-Jjw" customClass="InfoCell" customModule="chatbot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucK-kE-WEn">
+                        <rect key="frame" x="14" y="5" width="208" height="170"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cricbot" translatesAutoresizingMaskIntoConstraints="NO" id="Dph-xN-R24">
+                                <rect key="frame" x="49" y="14" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="4cB-s1-zB8"/>
+                                    <constraint firstAttribute="width" constant="110" id="aTF-i8-dDJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Py-XG-JmE">
+                                <rect key="frame" x="5" y="133" width="198" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XrL-a2-S3C"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="efC-mh-thR">
+                                <rect key="frame" x="11" y="9.5" width="20" height="19"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="ghR-ex-eXc"/>
+                                    <constraint firstAttribute="height" constant="20" id="vlb-pu-Iut"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2Py-XG-JmE" secondAttribute="bottom" constant="11" id="BZB-fp-SKJ"/>
+                            <constraint firstAttribute="height" constant="170" id="LNp-by-6SX"/>
+                            <constraint firstAttribute="trailing" secondItem="2Py-XG-JmE" secondAttribute="trailing" constant="5" id="b1e-HN-jBJ"/>
+                            <constraint firstAttribute="width" constant="208" id="cEB-MZ-nwE"/>
+                            <constraint firstItem="efC-mh-thR" firstAttribute="top" secondItem="ucK-kE-WEn" secondAttribute="top" constant="9" id="hQA-4x-5QD"/>
+                            <constraint firstItem="2Py-XG-JmE" firstAttribute="leading" secondItem="ucK-kE-WEn" secondAttribute="leading" constant="5" id="kw0-T6-dkv"/>
+                            <constraint firstItem="efC-mh-thR" firstAttribute="leading" secondItem="ucK-kE-WEn" secondAttribute="leading" constant="11" id="phU-aE-bQB"/>
+                            <constraint firstItem="Dph-xN-R24" firstAttribute="top" secondItem="ucK-kE-WEn" secondAttribute="top" constant="14" id="rA0-7g-Spf"/>
+                            <constraint firstItem="Dph-xN-R24" firstAttribute="centerX" secondItem="ucK-kE-WEn" secondAttribute="centerX" id="woQ-jO-3zY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="ucK-kE-WEn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3WK-RY-hK2"/>
+                    <constraint firstAttribute="bottom" secondItem="ucK-kE-WEn" secondAttribute="bottom" constant="5" id="8hf-pp-cdK"/>
+                    <constraint firstItem="ucK-kE-WEn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="D8D-di-3zR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="icon" destination="efC-mh-thR" id="lco-cL-bxs"/>
+                <outlet property="logo" destination="Dph-xN-R24" id="Mkq-IT-SJo"/>
+                <outlet property="urlButton" destination="2Py-XG-JmE" id="DQb-Ux-k4D"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cricbot" width="77.5" height="77.5"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

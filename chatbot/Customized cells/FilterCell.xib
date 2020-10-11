@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="517" height="103"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-sS-MSl">
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-sS-MSl">
                         <rect key="frame" x="20" y="34.5" width="227" height="34"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="227" id="xhI-E2-zdZ"/>
