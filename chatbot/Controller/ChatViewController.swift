@@ -66,8 +66,9 @@ class ChatViewController: UIViewController, AWSLexInteractionDelegate {
         tableView.register(UINib(nibName: "StatsCell", bundle: nil), forCellReuseIdentifier: "statsCell")
         tableView.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: "listCell")
         tableView.register(UINib(nibName: "InfoCell", bundle: nil), forCellReuseIdentifier: "infoCell")
-        //NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        //NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+          view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,6 +77,10 @@ class ChatViewController: UIViewController, AWSLexInteractionDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     //MARK: - Func optionPressed
@@ -170,6 +175,8 @@ class ChatViewController: UIViewController, AWSLexInteractionDelegate {
     @IBAction func askPressed(_ sender: Any) {
     }
     
+    //MARK: - Data Extraction Functions
+    
     func searchMatches() {
         let query = "Match results \(data.teamA) and \(data.teamB)"
         sendToLex(text: query)
@@ -228,7 +235,7 @@ class ChatViewController: UIViewController, AWSLexInteractionDelegate {
         let ex = String(ext.dropLast())
         var array = ex.components(separatedBy: "]), ")
         let count = array.count
-        //print(array)
+        print(array)
         //print(count)
         
         for i in 0...count-1 {
@@ -378,6 +385,8 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             cell.loserName.text = stats.short(input: data.teamB)
             cell.city.text = data.city
             cell.date.text = data.year
+            cell.loserScore.text = ""
+            cell.winnerScore.text = ""
             cell.winnerLogo.image = UIImage(named: data.teamA)
             cell.loserLogo.image = UIImage(named: data.teamB)
             cell.remark.text = "\(data.winner) won."
@@ -391,6 +400,8 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             cell.loserName.text = "RR"
             cell.city.text = "Abu Dhabi"
             cell.date.text = "Today"
+            cell.loserScore.text = ""
+            cell.winnerScore.text = ""
             cell.winnerLogo.image = UIImage(named: "Sunrisers Hyderabad")
             cell.loserLogo.image = UIImage(named: "Rajasthan Royals")
             cell.remark.text = "Yet to start"
@@ -483,11 +494,6 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             
             return cell
         }
-        
     }
-    /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        200
-    }*/
 }
 

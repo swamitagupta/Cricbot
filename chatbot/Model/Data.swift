@@ -36,8 +36,8 @@ struct Data {
     var winner3: String
 }
 
-var data = Data(teamA: "", teamB: "", player: "", year: "", city: "", scoreA: "", scoreB: "", prediction: "",
-                winner: "", team2A: "", team2B: "", year2: "", city2: "", score2A: "", score2B: "", winner2: "",
+var data = Data(teamA: "", teamB: "", player: "", year: "'2017-04-14'", city: "Bangalore", scoreA: "", scoreB: "", prediction: "",
+                winner: "Mumbai Indian", team2A: "", team2B: "", year2: "", city2: "", score2A: "", score2B: "", winner2: "",
                 team3A: "", team3B: "", year3: "", city3: "", score3A: "", score3B: "", winner3: "")
 
 let teams = [ "Mumbai Indians",

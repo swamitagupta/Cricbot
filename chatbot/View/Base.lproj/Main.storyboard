@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ChatViewController" customModule="chatbot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBl-pv-aAP">
@@ -238,19 +238,20 @@
             <objects>
                 <viewController id="uSV-bz-H1J" customClass="TextViewController" customModule="chatbot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2iQ-nA-IBc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B8-CS-Gvt">
-                                <rect key="frame" x="16" y="581" width="267" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B8-CS-Gvt">
+                                <rect key="frame" x="16" y="581" width="280" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="297" id="Fo3-Ih-NcI"/>
+                                    <constraint firstAttribute="width" constant="280" id="Fo3-Ih-NcI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="267" id="pDt-fL-TVA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtI-23-XCI">
-                                <rect key="frame" x="323" y="588" width="37" height="22"/>
+                                <rect key="frame" x="348" y="588" width="17" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="mic" catalog="system"/>
                                 <connections>
@@ -261,9 +262,8 @@
                                 <rect key="frame" x="0.0" y="10" width="375" height="563"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-2t-3D1">
-                                <rect key="frame" x="304" y="587" width="21" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-2t-3D1">
+                                <rect key="frame" x="309" y="589" width="21" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="paperplane.fill" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -276,17 +276,22 @@
                         <viewLayoutGuide key="safeArea" id="Uqo-PO-Vlf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="trailing" secondItem="PtI-23-XCI" secondAttribute="trailing" constant="15" id="5wj-iL-LqQ"/>
+                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="bottom" secondItem="PtI-23-XCI" secondAttribute="bottom" constant="13" id="5uz-DY-OkC"/>
+                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="trailing" secondItem="PtI-23-XCI" secondAttribute="trailing" constant="10" id="5wj-iL-LqQ"/>
                             <constraint firstItem="8le-VV-XTe" firstAttribute="trailing" secondItem="Uqo-PO-Vlf" secondAttribute="trailing" id="AZY-Ak-WmP"/>
                             <constraint firstItem="8le-VV-XTe" firstAttribute="leading" secondItem="Uqo-PO-Vlf" secondAttribute="leading" id="Akd-hC-00M"/>
                             <constraint firstItem="Uqo-PO-Vlf" firstAttribute="bottom" secondItem="0B8-CS-Gvt" secondAttribute="bottom" constant="8" id="FU9-zI-Eoi"/>
                             <constraint firstItem="0B8-CS-Gvt" firstAttribute="top" secondItem="8le-VV-XTe" secondAttribute="bottom" constant="8" symbolic="YES" id="Jdt-ud-iJL"/>
                             <constraint firstItem="0B8-CS-Gvt" firstAttribute="top" secondItem="8le-VV-XTe" secondAttribute="bottom" constant="8" symbolic="YES" id="KLW-Qk-URA"/>
                             <constraint firstItem="Uqo-PO-Vlf" firstAttribute="bottom" secondItem="PtI-23-XCI" secondAttribute="bottom" constant="13" id="KQs-bq-Vo4"/>
-                            <constraint firstItem="PtI-23-XCI" firstAttribute="leading" secondItem="0B8-CS-Gvt" secondAttribute="trailing" constant="10" id="RiL-pR-UhS"/>
+                            <constraint firstItem="0B8-CS-Gvt" firstAttribute="leading" secondItem="Uqo-PO-Vlf" secondAttribute="leading" constant="16" id="Wvk-w2-sEd"/>
+                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="trailing" secondItem="EeO-2t-3D1" secondAttribute="trailing" constant="45" id="eoI-EY-eRp"/>
                             <constraint firstItem="PtI-23-XCI" firstAttribute="top" secondItem="8le-VV-XTe" secondAttribute="bottom" constant="15" id="hFR-cp-jHs"/>
+                            <constraint firstItem="0B8-CS-Gvt" firstAttribute="top" secondItem="8le-VV-XTe" secondAttribute="bottom" constant="8" symbolic="YES" id="iLU-QU-Puy"/>
                             <constraint firstItem="8le-VV-XTe" firstAttribute="top" secondItem="Uqo-PO-Vlf" secondAttribute="top" constant="10" id="n3I-fC-hb0"/>
+                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="bottom" secondItem="0B8-CS-Gvt" secondAttribute="bottom" constant="8" id="n3g-74-AP0"/>
                             <constraint firstItem="0B8-CS-Gvt" firstAttribute="leading" secondItem="Uqo-PO-Vlf" secondAttribute="leading" constant="16" id="n5f-WU-dXV"/>
+                            <constraint firstItem="Uqo-PO-Vlf" firstAttribute="bottom" secondItem="EeO-2t-3D1" secondAttribute="bottom" constant="12" id="rAJ-fS-iPV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cricbot" id="dQu-fg-Nzr"/>

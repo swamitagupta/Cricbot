@@ -93,7 +93,6 @@ struct Teams {
             let item = array[i]
             shortform += item[0]
         }
-        print(shortform)
         return shortform
     }
 }
