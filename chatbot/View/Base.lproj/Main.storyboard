@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ChatViewController" customModule="chatbot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBl-pv-aAP">
@@ -238,11 +238,11 @@
             <objects>
                 <viewController id="uSV-bz-H1J" customClass="TextViewController" customModule="chatbot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2iQ-nA-IBc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B8-CS-Gvt">
-                                <rect key="frame" x="16" y="581" width="297" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B8-CS-Gvt">
+                                <rect key="frame" x="16" y="581" width="267" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="297" id="Fo3-Ih-NcI"/>
                                 </constraints>
@@ -253,11 +253,25 @@
                                 <rect key="frame" x="323" y="588" width="37" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="mic" catalog="system"/>
+                                <connections>
+                                    <action selector="micTapped:" destination="uSV-bz-H1J" eventType="touchUpInside" id="SaK-DX-tUj"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8le-VV-XTe">
                                 <rect key="frame" x="0.0" y="10" width="375" height="563"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-2t-3D1">
+                                <rect key="frame" x="304" y="587" width="21" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="paperplane.fill" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchPressed:" destination="uSV-bz-H1J" eventType="touchUpInside" id="mde-8r-dsb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uqo-PO-Vlf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -316,6 +330,7 @@
         <image name="cricbot" width="77.5" height="77.5"/>
         <image name="mic" catalog="system" width="108" height="128"/>
         <image name="online" width="20" height="20"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <namedColor name="cricPurple">
             <color red="0.25499999523162842" green="0.16899999976158142" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
