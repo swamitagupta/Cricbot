@@ -357,6 +357,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         
         else if message.type == "search" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchCell
+            cell.playerTextField.text = ""
             return cell
         }
         
@@ -478,6 +479,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "filterCell", for: indexPath) as! FilterCell
             let id = message.message
+            cell.yearTextField.text = ""
             cell.object = id
             if id == "player" {
                 cell.pickerData = players
