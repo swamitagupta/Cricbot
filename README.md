@@ -30,7 +30,7 @@ Main features and USPs:
 
 # Requirements
 
-- IoS 13
+- iOS 13
 
 ## Steps to Run
 * Clone or download the the repository. 
